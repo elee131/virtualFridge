@@ -14,10 +14,14 @@ class NewItemViewModel: ObservableObject {
     // database we initialize. unless its a user created item, then it should be todays date
     
     @Published var expiaryDate = Date()
+    @Published var tag = ""
+    @Published var description = ""
     
     init() {}
     
     func save() {
+        UserItem(name: self.name, expirationDate: self.expiaryDate, description: self.description,
+                 timeUntilExpiration: dis, isExpired: false)
         
     }
 }

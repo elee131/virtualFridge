@@ -10,6 +10,8 @@ import SwiftUI
 struct NewItemView: View {
     @StateObject var viewModel = NewItemViewModel()
     
+    @State private var description = ""
+    
     var body: some View {
         
         VStack {
@@ -22,6 +24,10 @@ struct NewItemView: View {
                 TextField("Item Name", text: $viewModel.name)
                 
                 DatePicker("Expiry Date", selection: $viewModel.expiaryDate)
+                
+                ContentView()
+                
+                TextField("Description", text: $description)
                 
                 Button("Save") {
                     viewModel.save()

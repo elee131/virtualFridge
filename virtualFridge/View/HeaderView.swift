@@ -35,6 +35,6 @@ struct HeaderView_Previews: PreviewProvider {
     static var previews: some View {
         HeaderView(title: "ExampleTitle",
                    subtitle: "example subtitle",
-                   bgColor: Color.green)
+                   bgColor: Color.pink)
     }
 }
